@@ -1,4 +1,4 @@
-import { Button, Container } from '@mui/material'
+import { Box, Button, Container } from '@mui/material'
 import { useCallback } from 'react'
 import { v4 as uuid } from 'uuid'
 import { CardsWrapper } from './home.styles'
@@ -6,6 +6,8 @@ import { useAppDispatch, useAppSelector } from 'store/hooks'
 import { homeActions, homeSelector } from 'store/home'
 import { Card } from 'modules/home/components/card'
 import { authActions } from 'store/auth'
+import { Counter } from 'components/counter'
+import { Counter1 } from 'components/counter1'
 
 const Home = () => {
   const dispatch = useAppDispatch()
@@ -21,7 +23,18 @@ const Home = () => {
   }, [dispatch])
 
   return (
-    <Container>
+    <Container style={{ paddingTop: '20px' }}>
+      <Box component='h2'>Counter</Box>
+      <Counter />
+
+      <Box component='h2'>Counter1</Box>
+      <Counter1 />
+
+      <Box style={{ marginTop: '20px' }}>
+        <Button onClick={logout}>Logout</Button>
+        <Button onClick={addCard}>Add card</Button>
+      </Box>
+
       <Button onClick={logout}>Logout</Button>
       <Button onClick={addCard}>Add card</Button>
 
