@@ -32,7 +32,7 @@ const Home = () => {
         <Button onClick={logout}>Logout</Button>
         <Button onClick={addCard}>Add card</Button>
       </Box>
-      g
+
       <CardsWrapper>
         {cards.map((item) => (
           <Card name={item.name} key={item.name} />
