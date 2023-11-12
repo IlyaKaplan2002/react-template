@@ -26,18 +26,13 @@ const Home = () => {
     <Container style={{ paddingTop: '20px' }}>
       <Box component='h2'>Counter</Box>
       <Counter />
-
       <Box component='h2'>Counter1</Box>
       <Counter1 />
-
       <Box style={{ marginTop: '20px' }}>
         <Button onClick={logout}>Logout</Button>
         <Button onClick={addCard}>Add card</Button>
       </Box>
-
-      <Button onClick={logout}>Logout</Button>
-      <Button onClick={addCard}>Add card</Button>
-
+      g
       <CardsWrapper>
         {cards.map((item) => (
           <Card name={item.name} key={item.name} />
