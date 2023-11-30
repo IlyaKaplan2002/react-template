@@ -29,7 +29,8 @@
       "modules": ["modules"],
       "modules/*": ["modules/*"],
       "constants": ["constants"],
-      "constants/*": ["constants/*"]
+      "constants/*": ["constants/*"],
+      "styles/*": ["styles/*"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx"],
